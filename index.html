@@ -5,40 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
+       body {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
         margin: 0;
-        }
-        .card {
-            background-color: aqua;
-            padding: 40px 135px;
-            font-family: poppins;
-            text-align: center;
-            border-radius: 25px;
-            box-shadow: 10px 10px 8px rgba(2, 158, 255, 0.3); /* Menambahkan shadow */
-        }
-        h1 {
-            font-size: 32px;
-            color: rgb(48, 3, 63);
-        }
-        .bio {
-            font-size: 20px;
-            font-weight: 400;
-            color: rgb(36, 3, 47);
-            margin-top: 40px;
-        }
+    }
+    .card {
+        background-color: aqua;
+        padding: 15px 15px 40px 40px;
+        font-family: poppins;
+        text-align: left;
+        border-radius: 25px;
+        box-shadow: 10px 10px 8px rgba(2, 158, 255, 0.3); /* Menambahkan shadow */
+        width: 40%; /* Mengatur lebar elemen .card */
+    }
+    h1 {
+        margin-left: 183px;
+        font-size: 32px;
+        color: rgb(48, 3, 63);
+    }
+    .bio {
+        font-size: 20px;
+        font-weight: 400;
+        color: rgb(36, 3, 47);
+        margin-top: 25px; 
+        position: relative;
+    }
+
+    .bio::before {
+        content: '';
+        border-bottom: 2px solid rgb(36, 3, 47); /* Menambahkan underline dengan warna dan lebar tertentu */
+        position: absolute;
+        top: -18px; /* Mengatur jarak -25px untuk tetap di atas biodata diri */
+        left: 0;
+        width: 100%; /* Panjang underline 100% (sama dengan panjang tabel) */
+    }
+
+    
+    table {
+            width: 100%;
+    }
+    th, td {
+        text-align: left;
+        padding: 5px;
+    }
     </style>
 </head>
 <body>
     <nav class="card">
         <h1>Biodata Diri</h1>
         <nav class="bio">
-            <p class="nama"> Nama : Asrul Hidayat </p>
-            <p class="nim"> NIM  : 60900121030 </p>
+            <table>
+                <tr>
+                    <th>Nama</th>
+                    <td>: Asrul Hidayat</td>
+                </tr>
+                <tr>
+                    <th>NIM</th>
+                    <td>: 60900121030</td>
+                </tr>
+                <tr>
+                    <th>Pendidikan Sekarang</th>
+                    <td>: UIN Alauddin Makassar</td>
+                </tr>
+            </table>
         </nav>
     </nav>
 </body>
